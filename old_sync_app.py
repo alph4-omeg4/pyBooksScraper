@@ -24,7 +24,7 @@ books: List[str] = page.books
 max_page: int = page.page_count
 
 
-for page_num in range(2, max_page-45):
+for page_num in range(2, max_page-48):
     logger.info(f'Loading page {page_num}')
     url = f'https://books.toscrape.com/catalogue/page-{page_num}.html'
     page_content = requests.get(url).content

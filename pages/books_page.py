@@ -24,7 +24,7 @@ class BooksPage:
         logger.debug('Finding max page count')
         pager = self.soup.select_one(BooksPageLocators.PAGER).string
         max_page = int(pager.strip().split(' ')[-1])
-        logger.info(f'Number of book catalogues: {max_page}')
+        logger.debug(f'Number of book catalogues: {max_page}')
         return max_page
         # pattern = 'Page [0-9]+ of ([0-9]+)'
         # matcher = re.search(pattern, pager)

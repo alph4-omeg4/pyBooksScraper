@@ -1,6 +1,7 @@
 from app import books
 from typing import Iterator
 
+
 USER_CHOICE = '''Enter one of the following
 - 'b' to look at 5-star books
 - 'c' to look at the cheapest books
@@ -32,12 +33,17 @@ def print_next_availiable_book() -> Iterator:
 
 next_book = print_next_availiable_book()
 
-while (user_input := input(USER_CHOICE)) != 'q':
-    if user_input == 'b':
-        print_best_books()
-    elif user_input == 'c':
-        print_cheapest_books()
-    elif user_input == 'n':
-        print(next(next_book))
-    else:
-        print('Invalid option, try again!')
+
+def start() -> None:
+    while (user_input := input(USER_CHOICE)) != 'q':
+        if user_input == 'b':
+            print_best_books()
+        elif user_input == 'c':
+            print_cheapest_books()
+        elif user_input == 'n':
+            print(next(next_book))
+        else:
+            print('Invalid option, try again!')
+
+
+start()

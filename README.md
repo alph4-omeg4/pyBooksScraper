@@ -1,7 +1,11 @@
 # pyBooksScraper
-Demo web scraper from books.toscrape.com/
+Async web scraper 
 
-Async scraper for books.toscrape.com
+asyncio, aiohttp
+beatifulsoup4
+logging
+
+example on books.toscrape.com:
 
 1. Scraping first page and parsing it to determine number of pages in catalogue
 2. Scraping remaining pages
